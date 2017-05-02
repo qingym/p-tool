@@ -174,9 +174,8 @@ class ContentResult():
 def f_content_url():
     list_url = []
     for line in open("ca.content_page_link_list"):
-        print line
         if line.startswith("/"):
-            list_url.append(line)
+            list_url.append(line.replace('\n', ''))
 
     print "length", len(list_url)
     return list_url
